@@ -2,8 +2,9 @@ import './App.css';
 import {useState} from "react";
 import Fullpage, {FullpageNavigation, FullpageSection, FullPageSections} from "@ap.cx/react-fullpage";
 import ProjectCard from "./components/ProjectCard";
-import ProfileCard from "./components/ProfileCard";
+import ProfileDrawer from "./components/ProfileDrawer";
 import data from "./data/local_data.json"
+import ProfileCard from "./components/ProfileCard";
 
 function App() {
 
@@ -13,29 +14,36 @@ function App() {
         height: '100vh',
         width: '100%',
         display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center'
+        justifyContent: 'end',
+        alignItems: 'center',
     }
 
     const [loadedData] = useState(data)
 
-    const projects = loadedData.projects.map(({name, description, imageUrl}) => {
+    const projects = loadedData.projects.map(({name, description, technologies}) => {
         return <FullpageSection style={SectionsStyle}>
             <ProjectCard name={name}
-                         description={description}/>
+                         description={description}
+                         technologies={technologies}/>
         </FullpageSection>
     })
-    console.log(loadedData.profile)
     const profile = loadedData.profile
 
     return (
-        <div>
+        <div className="flex flex-row">
+            <div className="fixed hidden lg:block md:hidden">
+                <ProfileDrawer profileData={profile}/>
+            </div>
             <Fullpage>
-                <FullpageNavigation/>
+                <div className="hidden lg:block">
+                    <FullpageNavigation/>
+                </div>
                 <FullPageSections>
-                    <FullpageSection style={SectionsStyle}>
-                        <ProfileCard profileData={profile}/>
-                    </FullpageSection>
+                    <div className="block lg:hidden md:block">
+                        <FullpageSection style={SectionsStyle}>
+                            <ProfileCard profileData={profile}/>
+                        </FullpageSection>
+                    </div>
                     {projects}
                 </FullPageSections>
             </Fullpage>
@@ -44,3 +52,6 @@ function App() {
 }
 
 export default App;
+
+
+// https://www.youtube.com/watch?v=a_f4vsNlKek for fullscreen scroller
