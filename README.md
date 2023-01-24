@@ -51,6 +51,7 @@ customize it when you are ready for it.
     - style fixes
     - add index.html to gitignore and set it as a template
     - firebasesrc to gitignore
+    - add a loader
 
 ### docs todo
 
