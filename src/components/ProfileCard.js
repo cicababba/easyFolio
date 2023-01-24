@@ -11,28 +11,25 @@ const ProfileCard = ({profileData}) => {
         bio
     } = profileData
 
-    return <div className="bg-gray-700 w-full h-full">
-        <figure><img src={profilePictureUrl} alt="Profile"/></figure>
-
-        <div className="card-body">
-            <ul>
-                <p className="card-title">{name}</p>
-                <p className="card-title">{companyName}</p>
-                <p className="text-">{jobTitle}</p>
-                <p className="text-xs">{birthDate}</p>
-                <div className="divider"/>
-                <p>{bio}</p>
-                <div className="divider"/>
-                <div className="text-right">
-                    <div className="text-2xl">Contacts</div>
-                    <a target="_blank" href={`mailto:${email}`}
-                       className="text-xs" rel="noreferrer">{email}
-                    </a>
-                    <p className="text-xs">{phoneNumber}</p>
-                    <a target="_blank" href={linkedinUrl} className="text-xs" rel="noreferrer">LinkedIn</a>
-                </div>
-            </ul>
+    return <div className="hero min-h-screen"
+                style={{backgroundImage: `url("${profilePictureUrl}")`}}>
+        <div className="hero-overlay bg-opacity-60"></div>
+        <div className="hero-content text-center text-neutral-content">
+            <div className="max-w-md">
+                <h1 className="text-5xl font-bold">{name}</h1>
+                <h1 className="text-3xl font-bold">{companyName}</h1>
+                <h1 className="mb-5 text-xl font-bold">{jobTitle}</h1>
+                <p className="mb-5">{bio}</p>
+            </div>
         </div>
+        {/*<div className="fixed bottom-0 right-0 z-40">*/}
+        {/*    <div className="text-2xl">Contacts</div>*/}
+        {/*    <a target="_blank" href={`mailto:${email}`}*/}
+        {/*       className="text-xs" rel="noreferrer">{email}*/}
+        {/*    </a>*/}
+        {/*    <p className="text-xs">{phoneNumber}</p>*/}
+        {/*    <a target="_blank" href={linkedinUrl} className="text-xs" rel="noreferrer">LinkedIn</a>*/}
+        {/*</div>*/}
     </div>
 }
 

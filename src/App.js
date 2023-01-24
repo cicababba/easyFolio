@@ -2,7 +2,6 @@ import './App.css';
 import {useState} from "react";
 import Fullpage, {FullpageNavigation, FullpageSection, FullPageSections} from "@ap.cx/react-fullpage";
 import ProjectCard from "./components/ProjectCard";
-import ProfileDrawer from "./components/ProfileDrawer";
 import data from "./data/local_data.json"
 import ProfileCard from "./components/ProfileCard";
 
@@ -14,7 +13,7 @@ function App() {
         height: '100vh',
         width: '100%',
         display: 'flex',
-        justifyContent: 'end',
+        justifyContent: 'center',
         alignItems: 'center',
     }
 
@@ -31,19 +30,20 @@ function App() {
 
     return (
         <div className="flex flex-row">
-            <div className="fixed hidden lg:block md:hidden">
-                <ProfileDrawer profileData={profile}/>
-            </div>
+            {/*<div className="fixed hidden lg:block md:hidden">*/}
+            {/*    <ProfileDrawer profileData={profile}/>*/}
+            {/*</div>*/}
             <Fullpage>
                 <div className="hidden lg:block">
                     <FullpageNavigation/>
                 </div>
                 <FullPageSections>
-                    <div className="block lg:hidden md:block">
-                        <FullpageSection style={SectionsStyle}>
-                            <ProfileCard profileData={profile}/>
-                        </FullpageSection>
-                    </div>
+                    {/*<div className="block lg:hidden md:block">*/}
+                    <FullpageSection style={SectionsStyle}>
+                        <ProfileCard profileData={profile}/>
+
+                    </FullpageSection>
+                    {/*</div>*/}
                     {projects}
                 </FullPageSections>
             </Fullpage>
