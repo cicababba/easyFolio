@@ -49,9 +49,11 @@ customize it when you are ready for it.
 
     - firebase configuration
     - style fixes
+    - add index.html to gitignore and set it as a template
 
 ### docs todo
 
     - talk about json configuration
     - talk about realtime database configuration
     - talk about choosing and using the theme
+    - talk about index.html configuration
