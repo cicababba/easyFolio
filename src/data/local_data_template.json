@@ -1,14 +1,20 @@
 {
-  "name": "",
-  "jobTitle": "",
-  "profilePictureUrl": "",
-  "email": "",
-  "birtDate": "",
+  "profile": {
+    "name": "",
+    "companyName": "",
+    "jobTitle": "",
+    "profilePictureUrl": "",
+    "email": "",
+    "birthDate": "",
+    "phoneNumber": "",
+    "linkedinUrl": "",
+    "bio": ""
+  },
   "projects": [
     {
       "name": "",
       "description": "",
-      "imageUrl": ""
+      "technologies": []
     }
   ]
 }

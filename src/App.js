@@ -3,7 +3,7 @@ import {useState} from "react";
 import Fullpage, {FullpageNavigation, FullpageSection, FullPageSections} from "@ap.cx/react-fullpage";
 import ProjectCard from "./components/ProjectCard";
 import data from "./data/local_data.json"
-import ProfileCard from "./components/ProfileCard";
+import Profile from "./components/Profile";
 
 function App() {
 
@@ -30,20 +30,14 @@ function App() {
 
     return (
         <div className="flex flex-row">
-            {/*<div className="fixed hidden lg:block md:hidden">*/}
-            {/*    <ProfileDrawer profileData={profile}/>*/}
-            {/*</div>*/}
             <Fullpage>
                 <div className="hidden lg:block">
                     <FullpageNavigation/>
                 </div>
                 <FullPageSections>
-                    {/*<div className="block lg:hidden md:block">*/}
                     <FullpageSection style={SectionsStyle}>
-                        <ProfileCard profileData={profile}/>
-
+                        <Profile profileData={profile}/>
                     </FullpageSection>
-                    {/*</div>*/}
                     {projects}
                 </FullPageSections>
             </Fullpage>

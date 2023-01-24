@@ -1,4 +1,4 @@
-const ProfileCard = ({profileData}) => {
+const Profile = ({profileData}) => {
     const {
         profilePictureUrl,
         name,
@@ -19,18 +19,19 @@ const ProfileCard = ({profileData}) => {
                 <h1 className="text-5xl font-bold">{name}</h1>
                 <h1 className="text-3xl font-bold">{companyName}</h1>
                 <h1 className="mb-5 text-xl font-bold">{jobTitle}</h1>
+                <div className="divider"/>
                 <p className="mb-5">{bio}</p>
+                <div className="divider"/>
+                <div className="text-2xl">Contacts</div>
+                <a target="_blank" href={`mailto:${email}`}
+                   className="text-xs" rel="noreferrer">
+                    {email}
+                </a>
+                <p className="text-xs">{phoneNumber}</p>
+                <a target="_blank" href={linkedinUrl} className="text-xs" rel="noreferrer">LinkedIn</a>
             </div>
         </div>
-        {/*<div className="fixed bottom-0 right-0 z-40">*/}
-        {/*    <div className="text-2xl">Contacts</div>*/}
-        {/*    <a target="_blank" href={`mailto:${email}`}*/}
-        {/*       className="text-xs" rel="noreferrer">{email}*/}
-        {/*    </a>*/}
-        {/*    <p className="text-xs">{phoneNumber}</p>*/}
-        {/*    <a target="_blank" href={linkedinUrl} className="text-xs" rel="noreferrer">LinkedIn</a>*/}
-        {/*</div>*/}
     </div>
 }
 
-export default ProfileCard
+export default Profile
