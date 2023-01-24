@@ -13,5 +13,6 @@ module.exports = {
         rtl: false,
         prefix: "",
         darkTheme: "",
+        themes: "night"
     },
 }
