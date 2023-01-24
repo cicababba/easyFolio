@@ -31,8 +31,8 @@ function App() {
     return (
         <div>
             <Fullpage>
+                <FullpageNavigation/>
                 <FullPageSections>
-                    <FullpageNavigation/>
                     <FullpageSection style={SectionsStyle}>
                         <ProfileCard profileData={profile}/>
                     </FullpageSection>
