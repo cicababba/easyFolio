@@ -37,7 +37,10 @@ function App() {
 
     return (
         <div className="flex flex-row">
-            {isLoading && <div style={SectionsStyle}><SpringSpinner/></div>}
+            {isLoading && <div className="flex flex-col" style={SectionsStyle}>
+                <SpringSpinner/>
+                <p className="mt-10">Awesomeness in progress...</p>
+            </div>}
             {!isLoading && <Fullpage>
                 <div className="hidden lg:block">
                     <FullpageNavigation/>
