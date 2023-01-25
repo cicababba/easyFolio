@@ -1,7 +1,7 @@
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-import SendIcon from '@mui/icons-material/Send';
 import PhoneIcon from '@mui/icons-material/Phone';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 
 const ProfileSection = ({profileData}) => {
     const {
@@ -37,29 +37,20 @@ const ProfileSection = ({profileData}) => {
                 <div className="divider"/>
                 <p className="mb-5">{bio}</p>
                 <div className="divider"/>
-                <div className="text-2xl text-left mb-3">Contacts</div>
-                <ul className="list-none text-left">
-                    <li>
-                        <div>
-                            <SendIcon/> <a target="_blank" href={`mailto:${email}`}
-                                           className="ml-1 text-xs" rel="noreferrer">
-                            {email}
-                        </a>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <PhoneIcon/>
-                            <button className="ml-2 text-xs">{phoneNumber}</button>
-                        </div>
-                    </li>
-                    {linkedinUrl && <li>
-                        <div>
+                <div className="text-2xl mb-3">Contacts</div>
+                <div className="flex flex-row justify-center">
+                    <span className="mx-5 cursor-pointer" onClick={() => window.open(`mailto:${email}`, '_blank')}>
+                        <AlternateEmailIcon/>
+                    </span>
+                    <span className="mx-5 cursor-pointer" onClick={() => window.open(`tel:${phoneNumber}`, '_blank')}>
+                    <PhoneIcon/>
+                    </span>
+                    {linkedinUrl &&
+                        <span className="mx-5 cursor-pointer" onClick={() => window.open(linkedinUrl, '_blank')}>
                             <LinkedInIcon/>
-                            <a target="_blank" href={linkedinUrl} className="ml-2 text-xs" rel="noreferrer">LinkedIn</a>
-                        </div>
-                    </li>}
-                </ul>
+                        </span>
+                    }
+                </div>
                 <div className="divider"/>
                 <div className="mt-10 hover:animate-bounce">
                     <p className="uppercase">Scroll down for more</p>
