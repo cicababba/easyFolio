@@ -3,7 +3,7 @@ import {useState} from "react";
 import Fullpage, {FullpageNavigation, FullpageSection, FullPageSections} from "@ap.cx/react-fullpage";
 import ProjectCard from "./components/ProjectCard";
 import data from "./data/local_data.json"
-import Profile from "./components/Profile";
+import ProfileSection from "./components/ProfileSection";
 
 function App() {
 
@@ -36,7 +36,7 @@ function App() {
                 </div>
                 <FullPageSections>
                     <FullpageSection style={SectionsStyle}>
-                        <Profile profileData={profile}/>
+                        <ProfileSection profileData={profile}/>
                     </FullpageSection>
                     {projects}
                 </FullPageSections>

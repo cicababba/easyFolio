@@ -1,6 +1,6 @@
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
-const Profile = ({profileData}) => {
+const ProfileSection = ({profileData}) => {
     const {
         profilePictureUrl,
         name,
@@ -45,4 +45,4 @@ const Profile = ({profileData}) => {
     </div>
 }
 
-export default Profile
+export default ProfileSection
