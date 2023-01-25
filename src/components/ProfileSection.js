@@ -1,7 +1,5 @@
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-import PhoneIcon from '@mui/icons-material/Phone';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
+import SocialIcons from "./SocialIcons";
 
 const ProfileSection = ({profileData}) => {
     const {
@@ -12,11 +10,10 @@ const ProfileSection = ({profileData}) => {
         birthDate,
         profileSectionBackGroundUrl,
         backgroundType,
-        email,
-        phoneNumber,
-        linkedinUrl,
+        contacts,
         bio
     } = profileData
+
 
     const bgUrl = profileSectionBackGroundUrl || `https://placeimg.com/2000/2000/${backgroundType}`
 
@@ -39,17 +36,7 @@ const ProfileSection = ({profileData}) => {
                 <div className="divider"/>
                 <div className="text-2xl mb-3">Contacts</div>
                 <div className="flex flex-row justify-center">
-                    <span className="mx-5 cursor-pointer" onClick={() => window.open(`mailto:${email}`, '_blank')}>
-                        <AlternateEmailIcon/>
-                    </span>
-                    <span className="mx-5 cursor-pointer" onClick={() => window.open(`tel:${phoneNumber}`, '_blank')}>
-                    <PhoneIcon/>
-                    </span>
-                    {linkedinUrl &&
-                        <span className="mx-5 cursor-pointer" onClick={() => window.open(linkedinUrl, '_blank')}>
-                            <LinkedInIcon/>
-                        </span>
-                    }
+                    <SocialIcons contacts={contacts}/>
                 </div>
                 <div className="divider"/>
                 <div className="mt-10 hover:animate-bounce">
