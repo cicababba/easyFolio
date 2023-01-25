@@ -10,6 +10,7 @@
     "birthDate": "",
     "contacts": [
       {
+        //allowed socials:     whatsapp-whatsapp number|instagram-profile irl|telegram-nickname|facebook-profile url|twitter-profile url|mail-email|phone-phone number|linkedin-profile url
         "key": "linkedin",
         "value": "url|number"
       }
