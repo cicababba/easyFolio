@@ -4,6 +4,9 @@
     "companyName": "",
     "jobTitle": "",
     "profilePictureUrl": "",
+    "profileSectionBackGroundUrl": "",
+    //choose one, this is used if don't have a background image for the profile section
+    "backgroundType": "tech|arch|nature|greyscale|people",
     "email": "",
     "birthDate": "",
     "phoneNumber": "",
