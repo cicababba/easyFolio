@@ -22,11 +22,12 @@ function App() {
 
     const [loadedData] = useState(data)
 
-    const projects = loadedData.projects.map(({name, description, technologies}) => {
+    const projects = loadedData.projects.map(({name, description, technologies, url}) => {
         return <FullpageSection style={SectionsStyle}>
             <ProjectCard name={name}
                          description={description}
-                         technologies={technologies}/>
+                         technologies={technologies}
+                         url={url}/>
         </FullpageSection>
     })
     const profile = loadedData.profile
