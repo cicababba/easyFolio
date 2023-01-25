@@ -10,15 +10,19 @@ const ProfileSection = ({profileData}) => {
         companyName,
         jobTitle,
         birthDate,
+        profileSectionBackGroundUrl,
+        backgroundType,
         email,
         phoneNumber,
         linkedinUrl,
         bio
     } = profileData
 
-    return <div className="hero min-h-screen"
-                style={{backgroundImage: `url("https://placeimg.com/2000/2000/tech")`}}>
-        <div className="hero-overlay bg-opacity-80"></div>
+    const bgUrl = profileSectionBackGroundUrl || `https://placeimg.com/2000/2000/${backgroundType}`
+
+    return <div className="hero min-h-screen transition ease-in-out -translate-y-1  duration-300"
+                style={{backgroundImage: `url("${bgUrl}")`}}>
+        <div className="hero-overlay bg-opacity-90"></div>
         <div className="hero-content text-center text-neutral-content">
             <div className="max-w-md">
                 <div className="avatar">
@@ -28,7 +32,8 @@ const ProfileSection = ({profileData}) => {
                 </div>
                 <h1 className="text-5xl font-bold">{name}</h1>
                 {companyName && <h1 className="text-3xl font-bold">{companyName}</h1>}
-                <h1 className="mb-5 text-xl font-bold">{jobTitle}</h1>
+                <h1 className="text-xl font-bold">{jobTitle}</h1>
+                <p className="mb-5 text-sm">{birthDate}</p>
                 <div className="divider"/>
                 <p className="mb-5">{bio}</p>
                 <div className="divider"/>

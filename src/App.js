@@ -1,13 +1,16 @@
 import './App.css';
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import Fullpage, {FullpageNavigation, FullpageSection, FullPageSections} from "@ap.cx/react-fullpage";
 import ProjectCard from "./components/ProjectCard";
 import data from "./data/local_data.json"
 import ProfileSection from "./components/ProfileSection";
+import {SpringSpinner} from "react-epic-spinners";
 
 function App() {
 
     // const {isLocal} = useConfiguration()
+
+    const [isLoading, setIsLoading] = useState(true)
 
     const SectionsStyle = {
         height: '100vh',
@@ -28,9 +31,14 @@ function App() {
     })
     const profile = loadedData.profile
 
+    useEffect(() => {
+        setTimeout(() => setIsLoading(false), 2000)
+    })
+
     return (
         <div className="flex flex-row">
-            <Fullpage>
+            {isLoading && <div style={SectionsStyle}><SpringSpinner/></div>}
+            {!isLoading && <Fullpage>
                 <div className="hidden lg:block">
                     <FullpageNavigation/>
                 </div>
@@ -40,7 +48,7 @@ function App() {
                     </FullpageSection>
                     {projects}
                 </FullPageSections>
-            </Fullpage>
+            </Fullpage>}
         </div>
     );
 }
