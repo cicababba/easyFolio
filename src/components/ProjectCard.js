@@ -3,7 +3,8 @@ import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 const ProjectCard = ({name, description, technologies, url, imageUrl}) => {
 
     return <div className="lg:card bg-gray-700 h-full lg:w-5/6 lg:h-5/6">
-        <figure><img src={`${imageUrl}` || 'https://placeimg.com/2000/2000/any'} alt="Album"/></figure>
+        <figure><img className="w-full" src={`${imageUrl}` || 'https://placeimg.com/2000/2000/any'} alt="Album"/>
+        </figure>
         <div className="card-body">
             {url &&
                 <div className="flex flex-row cursor-pointer items-center" onClick={() => window.open(url, "_blank")}>
