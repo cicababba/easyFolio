@@ -27,8 +27,8 @@ const AboutMe = ({skillSet: {aboutMe, hardSkills, softSkills}, profilePictureUrl
                     <h4>Soft skills:</h4>
                     <ul className="list-none">
                         {softSkills.map(el => <li className="mt-2 flex">
-                            <input type="checkbox" checked className="checkbox checkbox-secondary"/>
-                            <div className="ml-2 badge badge-primary">{el}</div>
+                            <input type="checkbox" checked className="checkbox checkbox-primary"/>
+                            <div className="ml-2 badge badge-secondary">{el}</div>
                         </li>)}
                     </ul>
                 </div>
