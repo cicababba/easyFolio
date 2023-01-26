@@ -26,7 +26,6 @@ const ProfileSection = ({profileData}) => {
                         <div
                             className="w-36 lg:w-80 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                             <img src={profilePictureUrl} alt="Profile"/>
-                            <div className="w-full h-full">ciao</div>
                         </div>
                     </div>}
                 {!profilePictureUrl && <div className="avatar placeholder">

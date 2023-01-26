@@ -15,7 +15,12 @@
         "value": "url|number"
       }
     ],
-    "bio": ""
+    "bio": "",
+    "skillSet": {
+      "aboutMe": "",
+      "hardSkills": [],
+      "softSkills": []
+    }
   },
   "projects": [
     {

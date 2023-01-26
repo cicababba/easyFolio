@@ -5,6 +5,7 @@ import ProjectCard from "./components/ProjectCard";
 import data from "./data/local_data.json"
 import ProfileSection from "./components/ProfileSection";
 import ProgressBar from "./components/ProgressBar";
+import AboutMe from "./components/AboutMe";
 
 function App() {
 
@@ -20,6 +21,8 @@ function App() {
     }
 
     const [loadedData] = useState(data)
+    const profile = loadedData.profile
+    const skillSet = loadedData.profile.skillSet
 
     const projects = loadedData.projects.map(({name, description, technologies, url, imageUrl}) => {
         return <FullpageSection style={SectionsStyle}>
@@ -30,7 +33,6 @@ function App() {
                          imageUrl={imageUrl}/>
         </FullpageSection>
     })
-    const profile = loadedData.profile
 
     useEffect(() => {
         setTimeout(() => setFadeOut(true), 1800)
@@ -53,6 +55,9 @@ function App() {
                     <FullpageSection style={SectionsStyle}>
                         <ProfileSection profileData={profile}/>
                     </FullpageSection>
+                    {skillSet && <FullpageSection style={SectionsStyle}>
+                        <AboutMe skillSet={skillSet} profilePictureUrl={profile.profilePictureUrl}/>
+                    </FullpageSection>}
                     {projects}
                 </FullPageSections>
             </Fullpage>}
