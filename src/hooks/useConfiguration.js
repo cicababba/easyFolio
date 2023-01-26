@@ -1,6 +1,5 @@
 const useConfiguration = () => {
-
-    const isLocal = () => process.env.REACT_APP_DATA_MODE === "local"
+    const isLocal = () => process.env.REACT_APP_DATA_MODE.toLowerCase() === "local"
 
     return {
         isLocal

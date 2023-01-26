@@ -5,10 +5,13 @@ import ProjectCard from "./components/ProjectCard";
 import data from "./data/local_data.json"
 import ProfileSection from "./components/ProfileSection";
 import {SpringSpinner} from "react-epic-spinners";
+import useConfiguration from "./hooks/useConfiguration";
+import useDatabase from "./hooks/useDatabase";
 
 function App() {
 
-    // const {isLocal} = useConfiguration()
+    const {isLocal} = useConfiguration()
+    const {getData} = useDatabase()
 
     const [isLoading, setIsLoading] = useState(true)
 
@@ -20,7 +23,7 @@ function App() {
         alignItems: 'center',
     }
 
-    const [loadedData] = useState(data)
+    const [loadedData] = useState(isLocal() ? data : getData())
 
     const projects = loadedData.projects.map(({name, description, technologies, url, imageUrl}) => {
         return <FullpageSection style={SectionsStyle}>
