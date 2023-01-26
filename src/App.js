@@ -4,11 +4,9 @@ import Fullpage, {FullpageNavigation, FullpageSection, FullPageSections} from "@
 import ProjectCard from "./components/ProjectCard";
 import data from "./data/local_data.json"
 import ProfileSection from "./components/ProfileSection";
-import {SpringSpinner} from "react-epic-spinners";
+import ProgressBar from "./components/ProgressBar";
 
 function App() {
-
-    // const {isLocal} = useConfiguration()
 
     const [isLoading, setIsLoading] = useState(true)
 
@@ -40,8 +38,8 @@ function App() {
     return (
         <div className="flex flex-row">
             {isLoading && <div className="flex flex-col" style={SectionsStyle}>
-                <SpringSpinner/>
-                <p className="mt-10">Awesomeness in progress...</p>
+                <ProgressBar/>
+                <p className="mt-10">Awesomeness loading...</p>
             </div>}
             {!isLoading && <Fullpage>
                 <div className="hidden lg:block">
