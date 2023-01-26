@@ -39,7 +39,7 @@ const ProfileSection = ({profileData}) => {
                     <SocialIcons contacts={contacts}/>
                 </div>
                 <div className="divider"/>
-                <div className="mt-10 hover:animate-bounce">
+                <div className="mt-10">
                     <p className="uppercase">Scroll down to see what I worked on</p>
                     <ArrowDropDownIcon/>
                 </div>
