@@ -40,8 +40,9 @@ const ProfileSection = ({profileData}) => {
                 </div>
                 <div className="divider"/>
                 <div className="mt-10 hover:animate-bounce">
-                    <p className="uppercase">Scroll down for more</p>
-                    <ArrowDropDownIcon/></div>
+                    <p className="uppercase">Scroll down to see what I worked on</p>
+                    <ArrowDropDownIcon/>
+                </div>
             </div>
         </div>
     </div>
