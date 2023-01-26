@@ -9,6 +9,7 @@ import ProgressBar from "./components/ProgressBar";
 function App() {
 
     const [isLoading, setIsLoading] = useState(true)
+    const [fadeOut, setFadeOut] = useState(false)
 
     const SectionsStyle = {
         height: '100vh',
@@ -32,15 +33,18 @@ function App() {
     const profile = loadedData.profile
 
     useEffect(() => {
+        setTimeout(() => setFadeOut(true), 1800)
         setTimeout(() => setIsLoading(false), 2000)
     })
 
     return (
         <div className="flex flex-row">
-            {isLoading && <div className="flex flex-col" style={SectionsStyle}>
-                <ProgressBar/>
-                <p className="mt-10">Awesomeness loading...</p>
-            </div>}
+            {isLoading &&
+                <div className={`flex flex-col ${fadeOut && 'animate-out fade-out duration-500'}`}
+                     style={SectionsStyle}>
+                    <ProgressBar/>
+                    <p className="mt-10">Awesomeness loading...</p>
+                </div>}
             {!isLoading && <Fullpage>
                 <div className="hidden lg:block">
                     <FullpageNavigation/>

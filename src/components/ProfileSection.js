@@ -17,7 +17,7 @@ const ProfileSection = ({profileData}) => {
 
     const bgUrl = profileSectionBackGroundUrl || `https://placeimg.com/2000/2000/${backgroundType}`
 
-    return <div className="hero min-h-screen transition ease-in-out -translate-y-1  duration-300"
+    return <div className="hero min-h-screen animate-in fade-in slide-in-from-bottom duration-1000"
                 style={{backgroundImage: `url("${bgUrl}")`}}>
         <div className="hero-overlay bg-opacity-90"></div>
         <div className="hero-content text-center text-neutral-content">
@@ -40,7 +40,7 @@ const ProfileSection = ({profileData}) => {
                 </div>
                 <div className="divider"/>
                 <div className="mt-10">
-                    <p className="uppercase">Scroll down to see what I worked on</p>
+                    <p className="uppercase">Scroll down to see more</p>
                     <ArrowDropDownIcon/>
                 </div>
             </div>
