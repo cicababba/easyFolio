@@ -14,36 +14,36 @@ const SocialIcons = ({contacts}) => {
         key = key.toLowerCase()
         switch (key) {
             case "linkedin":
-                return <span className="mx-5 cursor-pointer" onClick={() => window.open(value, '_blank')}>
+                return <span className="m-2 cursor-pointer" onClick={() => window.open(value, '_blank')}>
                             <LinkedInIcon/>
                         </span>
             case "phone":
-                return <span className="mx-5 cursor-pointer" onClick={() => window.open(`tel:${value}`)}>
+                return <span className="m-2 cursor-pointer" onClick={() => window.open(`tel:${value}`)}>
                     <PhoneIcon/>
                     </span>
             case "mail":
-                return <span className="mx-5 cursor-pointer" onClick={() => window.open(`mailto:${value}`, '_blank')}>
+                return <span className="m-2 cursor-pointer" onClick={() => window.open(`mailto:${value}`, '_blank')}>
                         <AlternateEmailIcon/>
                     </span>
             case "twitter":
-                return <span className="mx-5 cursor-pointer" onClick={() => window.open(`${value}`, '_blank')}>
+                return <span className="m-2 cursor-pointer" onClick={() => window.open(`${value}`, '_blank')}>
                         <TwitterIcon/>
                     </span>
             case "facebook":
-                return <span className="mx-5 cursor-pointer" onClick={() => window.open(`${value}`, '_blank')}>
+                return <span className="m-2 cursor-pointer" onClick={() => window.open(`${value}`, '_blank')}>
                         <FacebookIcon/>
                     </span>
             case "telegram":
-                return <span className="mx-5 cursor-pointer"
+                return <span className="m-2 cursor-pointer"
                              onClick={() => window.open(`https://telegram.me/${value}`, '_blank')}>
                         <TelegramIcon/>
                     </span>
             case "instagram":
-                return <span className="mx-5 cursor-pointer" onClick={() => window.open(`${value}`, '_blank')}>
+                return <span className="m-2 cursor-pointer" onClick={() => window.open(`${value}`, '_blank')}>
                         <InstagramIcon/>
                     </span>
             case "whatsapp":
-                return <span className="mx-5 cursor-pointer"
+                return <span className="m-2 cursor-pointer"
                              onClick={() => window.open(`whatsapp://send?phone=${value}`, '_blank')}>
                         <WhatsAppIcon/>
                     </span>

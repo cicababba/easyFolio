@@ -42,7 +42,7 @@ const ProfileSection = ({profileData}) => {
                 <p className="mb-5">{bio}</p>
                 <div className="divider"/>
                 <div className="text-2xl mb-3">Contacts</div>
-                <div className="flex flex-row justify-center">
+                <div className="flex flex-row flex-wrap justify-center">
                     <SocialIcons contacts={contacts}/>
                 </div>
                 <div className="divider"/>
