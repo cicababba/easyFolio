@@ -8,7 +8,7 @@ const AboutMe = ({skillSet: {aboutMe, hardSkills, softSkills}, profilePictureUrl
                 </div>
             </div>
         </figure>
-        <div className="card-body lg:w-4/6">
+        <div className="card-body lg:w-4/6 bg-neutral text-primary">
             <h2 className="card-title">More about me</h2>
             <p className="flex-none">{aboutMe}</p>
             <div className="divider"/>

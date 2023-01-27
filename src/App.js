@@ -23,6 +23,7 @@ function App() {
     const [loadedData] = useState(data)
     const profile = loadedData.profile
     const skillSet = loadedData.profile.skillSet
+    const theme = loadedData.theme
 
     const projects = loadedData.projects.map(({name, description, technologies, url, imageUrl}) => {
         return <FullpageSection style={SectionsStyle}>
@@ -40,7 +41,7 @@ function App() {
     })
 
     return (
-        <div className="flex flex-row">
+        <div className="flex flex-row" data-theme={theme}>
             {isLoading &&
                 <div className={`flex flex-col ${fadeOut && 'animate-out fade-out duration-500'}`}
                      style={SectionsStyle}>
