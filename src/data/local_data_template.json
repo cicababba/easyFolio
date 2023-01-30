@@ -23,6 +23,7 @@
         {
           "name": "Skillname",
           "rating": 5
+          // 0 out of 5
         }
       ],
       "softSkills": [
