@@ -7,8 +7,7 @@
     "jobTitle": "",
     "profilePictureUrl": "",
     "profileSectionBackGroundUrl": "",
-    //choose one, this is used if don't have a background image for the profile section
-    "backgroundType": "tech|arch|nature|greyscale|people",
+    //if not set a random one will be picked
     "birthDate": "",
     "contacts": [
       {
@@ -20,8 +19,16 @@
     "bio": "",
     "skillSet": {
       "aboutMe": "",
-      "hardSkills": [],
-      "softSkills": []
+      "hardSkills": [
+        {
+          "name": "Skillname",
+          "rating": 5
+        }
+      ],
+      "softSkills": [
+        "skill 1",
+        "skill 2"
+      ]
     }
   },
   "projects": [

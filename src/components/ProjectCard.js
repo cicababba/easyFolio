@@ -15,7 +15,7 @@ const ProjectCard = ({name, description, technologies, url, imageUrl}) => {
             {!url && <h2 className="card-title">{name}</h2>}
             <p>{description}</p>
             {!!technologies.length && <div className="card-actions justify-end">
-                {technologies.map(el => <span className="indicator-item badge badge-primary">{el}</span>)}
+                {technologies.map(el => <span className="indicator-item badge badge-accent">{el}</span>)}
             </div>}
         </div>
     </div>
