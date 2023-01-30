@@ -9,12 +9,11 @@ const ProfileSection = ({profileData}) => {
         jobTitle,
         birthDate,
         profileSectionBackGroundUrl,
-        backgroundType,
         contacts,
         bio
     } = profileData
 
-    const bgUrl = profileSectionBackGroundUrl || `https://placeimg.com/2000/2000/${backgroundType}`
+    const bgUrl = profileSectionBackGroundUrl || `https://picsum.photos/2000/2000/`
 
     return <div className="hero min-h-screen animate-in fade-in slide-in-from-bottom duration-1000"
                 style={{backgroundImage: `url("${bgUrl}")`}}>
