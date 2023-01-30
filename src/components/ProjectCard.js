@@ -2,7 +2,7 @@ import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 
 const ProjectCard = ({name, description, technologies, url, imageUrl}) => {
 
-    const projectPictureUrl = imageUrl || 'https://placeimg.com/2000/2000/any'
+    const projectPictureUrl = imageUrl || 'https://picsum.photos/2000/2000/'
     return <div className="lg:card bg-neutral text-primary h-full lg:w-5/6 lg:h-5/6">
         <figure><img className="w-full" src={projectPictureUrl} alt="Album"/>
         </figure>
