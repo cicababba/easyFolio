@@ -40,19 +40,21 @@ const AboutMe = ({skillSet: {aboutMe, hardSkills, softSkills}, profilePictureUrl
                     {softSkillsDOM}
                 </div>
             </div>
-            <div className="lg:hidden block">
-                <h2 className="mb-2">Hard skills:</h2>
-                {hardSkills.map(el =>
-                    <div className="flex flex-col mb-2">
-                        <span className="text-xs">{el.name}</span>
-                        <progress className="mr-2 progress progress-accent w-full bg-secondary" value={el.rating}
-                                  max="5">{el.name}</progress>
-                    </div>
-                )}
-            </div>
-            <div className="lg:hidden block">
-                <h2 className="mb-2">Soft skills:</h2>
-                {softSkills.map(el => <div className="m-2 badge badge-accent">{el}</div>)}
+            <div className="lg:hidden block overflow-auto">
+                <div>
+                    <h2 className="mb-2">Hard skills:</h2>
+                    {hardSkills.map(el =>
+                        <div className="flex flex-col mb-2">
+                            <span className="text-xs">{el.name}</span>
+                            <progress className="mr-2 progress progress-accent w-full bg-secondary" value={el.rating}
+                                      max="5">{el.name}</progress>
+                        </div>
+                    )}
+                </div>
+                <div className="lg:hidden block">
+                    <h2 className="mb-2">Soft skills:</h2>
+                    {softSkills.map(el => <div className="mr-1 text-xs badge badge-accent">{el}</div>)}
+                </div>
             </div>
         </div>
     </div>
