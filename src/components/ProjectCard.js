@@ -9,8 +9,8 @@ const ProjectCard = ({name, description, technologies, url, imageUrl}) => {
         <div className="card-body">
             {url &&
                 <div className="flex flex-row cursor-pointer items-center" onClick={() => window.open(url, "_blank")}>
-                    <h2 className="mr-2 card-title">{name}</h2>
-                    <OpenInNewIcon/>
+                    <h2 className="mr-2 card-title text-black">{name}</h2>
+                    <OpenInNewIcon className="text-black"/>
                 </div>}
             {!url && <h2 className="card-title">{name}</h2>}
             <p>{description}</p>

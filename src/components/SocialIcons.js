@@ -6,6 +6,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import YouTubeIcon from '@mui/icons-material/YouTube';
 
 const SocialIcons = ({contacts}) => {
 
@@ -47,6 +48,10 @@ const SocialIcons = ({contacts}) => {
                              onClick={() => window.open(`whatsapp://send?phone=${value}`, '_blank')}>
                         <WhatsAppIcon/>
                     </span>
+                     case "youtube":
+                        return <span className="m-2 cursor-pointer"  onClick={() => window.open(value, '_blank')}>
+                                <YouTubeIcon/>
+                            </span>
             default:
                 return <></>
 

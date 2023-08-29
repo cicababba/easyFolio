@@ -56,9 +56,9 @@ function App() {
                     <FullpageSection style={SectionsStyle}>
                         <ProfileSection profileData={profile}/>
                     </FullpageSection>
-                    {skillSet && <FullpageSection style={SectionsStyle}>
+                    {/* {skillSet && <FullpageSection style={SectionsStyle}>
                         <AboutMe skillSet={skillSet} profilePictureUrl={profile.profilePictureUrl}/>
-                    </FullpageSection>}
+                    </FullpageSection>} */}
                     {projects}
                 </FullPageSections>
             </Fullpage>}
