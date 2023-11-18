@@ -17,7 +17,7 @@ const AboutMe = ({skillSet: {aboutMe, hardSkills, softSkills}, profilePictureUrl
 
 
     return <div
-        className={`card-side rounded-none lg:rounded-2xl card bg-gray-700 lg:w-5/6 h-full w-full lg:h-5/6`}>
+        className={`card-side rounded-none lg:rounded-2xl card lg:w-5/6 h-full w-full lg:h-5/6`}>
         <figure>
             <div className="avatar hidden lg:block">
                 <div className="w-36 lg:w-80 h-full w-2/6">
