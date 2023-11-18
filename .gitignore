@@ -33,4 +33,4 @@ firebase-debug.log
 .idea
 
 public/index.html
-public
+public/*
