@@ -15,7 +15,6 @@ const AboutMe = ({skillSet: {aboutMe, hardSkills, softSkills}, profilePictureUrl
         </div>
     })
 
-
     return <div
         className={`card-side rounded-none lg:rounded-2xl card lg:w-5/6 h-full w-full lg:h-5/6`}>
         <figure>
@@ -29,30 +28,30 @@ const AboutMe = ({skillSet: {aboutMe, hardSkills, softSkills}, profilePictureUrl
             <h2 className="card-title">More about me</h2>
             <p className="flex-none">{aboutMe}</p>
             <div className="divider"/>
-            <h2 className="card-title">Here's a list of my skills</h2>
+            {/* <h2 className="card-title">Here's a list of what I like to take photos to:</h2> */}
             <div className="flex-row w-full hidden lg:flex">
-                <div className="w-2/4">
-                    <h4>Hard skills:</h4>
+               {hardSkills.length &&  <div className="w-2/4">
+                    <h4 className="mb-2 font-bold">Here's a list of what I like to take photos to:</h4>
                     {hardSkillsDOM}
-                </div>
-                <div className="w-2/4">
-                    <h4>Soft skills:</h4>
+                </div>}
+                {softSkills.length && <div className="w-2/4">
+                    <h4 className="font-bold">Me in keywords:</h4>
                     {softSkillsDOM}
-                </div>
+                </div>}
             </div>
             <div className="lg:hidden block overflow-auto">
                 <div>
-                    <h2 className="mb-2">Hard skills:</h2>
+                    <h2 className="mb-2 font-bold">Here's a list of what I like to take photos to:</h2>
                     {hardSkills.map(el =>
                         <div className="flex flex-col mb-2">
-                            <span className="text-xs">{el.name}</span>
+                            <span className="text-sm">{el.name}</span>
                             <progress className="mr-2 progress progress-accent w-full bg-secondary" value={el.rating}
                                       max="5">{el.name}</progress>
                         </div>
                     )}
                 </div>
                 <div className="lg:hidden block">
-                    <h2 className="mb-2">Soft skills:</h2>
+                    <h2 className="mb-2 font-bold">Me in keywords:</h2>
                     {softSkills.map(el => <div className="mr-1 text-xs badge badge-accent">{el}</div>)}
                 </div>
             </div>
